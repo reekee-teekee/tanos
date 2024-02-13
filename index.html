@@ -69,7 +69,10 @@
           <h3 class="calc__title">Рассчитайте стоимость ремонта</h3>
           <div class="calc__square">
             <p class="calc__subtitle">Площадь квартиры:</p>
-
+            <div class="slider-value">
+              <span class="calc__value">68</span>м<sup>2</sup>
+            </div>
+            <input class="calc__range" type="range" id="fader" min="0" max="150" value="68" steps="1">
           </div>
           <div class="calc__type">
             <p class="calc__subtitle">Тип жилья:</p>
@@ -123,6 +126,8 @@
   </section>
 
   <script src="./assets/js/main.js"></script>
+  <script src="./assets/js/slider.js"></script>
+
 </body>
 
 </html>
