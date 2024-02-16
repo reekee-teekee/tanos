@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Roboto:wght@400;500;700;900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="./assets/css/normalize.css">
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <title>Строительная компания</title>
+</head>
+
+<body>
+  <header class="header">
+    <a class="logo">
+      <img src="./assets/img/logo.jpg" alt="Логотип">
+    </a>
+    <nav class="menu">
+      <ul class="menu__list">
+        <li class="menu__item">
+          <a href="#" class="dropdown-menu menu__link">
+            Меню
+          </a>
+          <svg class="close-btn" width="24" height="24" viewBox="0 0 24 24" fill="none"
+            xmlns="http://www.w3.org/2000/svg">
+            <circle cx="12" cy="12" r="12" fill="white" />
+            <rect x="5" y="17" width="17" height="2" transform="rotate(-45 5 17)" fill="#5234B7" />
+            <rect x="6" y="5" width="17" height="2" transform="rotate(45 6 5)" fill="#5234B7" />
+          </svg>
+          <ul class="submenu">
+            <li class="submenu__item"><a href="#">Услуги</a></li>
+            <li class="submenu__item"><a href="#">Статьи</a></li>
+            <li class="submenu__item"><a href="#">Вакансии</a></li>
+            <li class="submenu__item"><a href="#">Франшиза</a></li>
+          </ul>
+        </li>
+        <li class="menu__mobile">
+          <ul class="mobile__list">
+            <li class="mobile__item">
+              <a href="#" class="mobile__link">Услуги</a>
+            </li>
+            <li class="mobile__item">
+              <a href="#" class="mobile__link">Статьи</a>
+            </li>
+            <li class="mobile__item">
+              <a href="#" class="mobile__link">Вакансии</a>
+            </li>
+            <li class="mobile__item">
+              <a href="#" class="mobile__link">Франшиза</a>
+            </li>
+
+          </ul>
+        </li>
+        <li class="menu__item"><a class="menu__link" href="#">Портфолио</a></li>
+        <li class="menu__item"><a class="menu__link" href="#">Цены</a></li>
+        <li class="menu__item"><a class="menu__link" href="#">Схема работы</a></li>
+        <li class="menu__item"><a class="menu__link" href="#">Отзывы</a></li>
+        <li class="menu__item"><a class="menu__link" href="#">Контакты</a></li>
+        <li class="menu__item"><a class="menu__link" href="#">Гарантия</a></li>
+      </ul>
+    </nav>
+    <div class="header__burger">
+      <span class="header__burger-menu"></span>
+    </div>
+    <a class="btn callback" href="#callback">Обратный звонок</a>
+    <a class="btn callback__phone" href="#callback">
+      <svg class="callback__phone-img" width="25" height="25" viewBox="0 0 25 25" fill="none"
+        xmlns="http://www.w3.org/2000/svg">
+        <path
+          d="M8.0514 1.19978C7.67544 0.291615 6.68428 -0.191762 5.73705 0.0670159L1.44037 1.23884C0.590794 1.4732 0 2.24465 0 3.12352C0 15.2031 9.79449 24.9976 21.874 24.9976C22.7529 24.9976 23.5244 24.4068 23.7587 23.5572L24.9305 19.2605C25.1893 18.3133 24.7059 17.3221 23.7978 16.9462L19.1105 14.9931C18.3146 14.6611 17.3918 14.8906 16.8498 15.5595L14.8773 17.9666C11.4399 16.3407 8.65684 13.5576 7.03094 10.1203L9.43806 8.1526C10.107 7.60575 10.3365 6.68782 10.0044 5.89195L8.0514 1.20466V1.19978Z"
+          fill="white" />
+      </svg>
+    </a>
+  </header>
+  <section class="hero">
+    <div class="container">
+      <div class="hero__wrapper">
+        <div class="hero__left">
+          <h1 class="hero__title">Ремонт под ключ от 2900 руб/м<sup>2</sup>.</h1>
+          <p class="hero__subtitle">При заказе ремонта делаем дизайн-проект в подарок</p>
+          <div class="hero__advantages">
+            <div class="advantages__item">
+              <img class="advantages__icon" src="./assets/img/truck.svg" alt="Грузовик">
+              <p class="advantages__text">Бесплатный выезд в день обращения</p>
+            </div>
+            <div class="advantages__item">
+              <img class="advantages__icon" src="./assets/img/guarantee.svg" alt="Гарантии">
+              <p class="advantages__text">Гарантия на работу до&nbsp;5 лет</p>
+            </div>
+            <div class="advantages__item">
+              <img class="advantages__icon" src="./assets/img/time_management.svg" alt="Меледжер">
+              <p class="advantages__text">Жесткое соблюдение сроков</p>
+            </div>
+          </div>
+        </div>
+        <div class="hero__right">
+          <div class="hero__calc">
+            <h3 class="calc__title">Рассчитайте стоимость ремонта</h3>
+            <div class="calc__square">
+              <div class="slider-value">
+                <div class="calc__subtitle">Площадь квартиры:</div>
+                <div class="calc__value">68</div>
+                <div class="calc__measure">м<sup>2</sup></div>
+              </div>
+              <input class="calc__range" type="range" id="fader" min="0" max="100" value="68" step="1">
+            </div>
+            <div class="calc__type">
+              <p class="calc__subtitle">Тип жилья:</p>
+              <div class="label__wrapper">
+                <label class="calc__label-container">
+                  <input class="calc__input" type="radio" id="secondary" name="types">
+                  <span class="calc__custon-input"></span>
+                  <span class="calc__input-label">Вторичное жилье</span>
+                </label>
+                <label class="calc__label-container">
+                  <input class="calc__input" type="radio" id="new" name="types">
+                  <span class="calc__custon-input"></span>
+                  <span class="calc__input-label">Новостройка</span>
+                </label>
+                <label class="calc__label-container">
+                  <input class="calc__input" type="radio" id="office" name="types">
+                  <span class="calc__custon-input"></span>
+                  <span class="calc__input-label">Офис</span>
+                </label>
+              </div>
+            </div>
+            <div class="calc__rooms">
+              <p class="calc__subtitle">Кол-во комнат:</p>
+              <div class="label__wrapper">
+                <label class="calc__label-container">
+                  <input class="calc__input" type="radio" id="one" name="rooms">
+                  <span class="calc__custon-input"></span>
+                  <span class="calc__input-label">1</span>
+                </label>
+                <label class="calc__label-container">
+                  <input class="calc__input" type="radio" id="two" name="rooms">
+                  <span class="calc__custon-input"></span>
+                  <span class="calc__input-label">2</span>
+                </label>
+                <label class="calc__label-container">
+                  <input class="calc__input" type="radio" id="3" name="rooms">
+                  <span class="calc__custon-input"></span>
+                  <span class="calc__input-label">3+</span>
+                </label>
+                <label class="calc__label-container">
+                  <input class="calc__input" type="radio" id="studio" name="rooms">
+                  <span class="calc__custon-input"></span>
+                  <span class="calc__input-label">Студия</span>
+                </label>
+              </div>
+            </div>
+            <button class="calc__btn btn">Отправить</button>
+          </div>
+        </div>
+      </div>
+      <div class="scroll">
+        <img class="scroll__img" src="./assets/img/circled_down.svg" alt="Прокрутить вниз">
+        <span class="scroll_text">Scroll</span>
+      </div>
+    </div>
+    <div class="hero__bg"></div>
+  </section>
+
+  <script src="./assets/js/menu.js"></script>
+  <script src="./assets/js/slider.js"></script>
+
+</body>
+
+</html>
