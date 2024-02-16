@@ -31,29 +31,29 @@ body {
   margin: 0;
   font-size: 16px;
   color: #fff;
-  background: linear-gradient(135deg, #3625af 0%, #c46bd5 100%);
+  background-image: linear-gradient(135deg, #3625af 0%, #c46bd5 100%);
 }
 
 .container {
-  width: 1110px;
   margin: 0 auto;
+  padding-left: 10px;
+  padding-right: 10px;
+  max-width: 1100px;
 }
 
 .header {
   display: flex;
-  width: 1507px;
-  margin: 0 auto 90px;
-  padding-left: 47px;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 90px;
   padding-top: 27px;
 }
 
 .logo {
-  margin-right: 133px;
   padding-top: 8px;
 }
 
 .menu {
-  margin-right: auto;
   font-family: var(--second-family);
   font-weight: 700;
   text-transform: uppercase;
@@ -64,7 +64,7 @@ body {
   gap: 39px;
   margin: 0;
   padding: 0;
-  list-style-type: none;
+  list-style: none;
 }
 
 .menu__item {
@@ -88,6 +88,7 @@ body {
   margin: 0;
   padding: 0;
   list-style-type: none;
+  z-index: 10;
 }
 
 .submenu.open-menu {
@@ -110,28 +111,40 @@ body {
   margin-bottom: 12px;
 }
 
+.menu__mobile {
+  display: none;
+}
+
+.header__burger {
+  display: block;
+  width: 100px;
+  height: 50px;
+  padding: 0;
+  background: #302594;
+}
+
+.callback__phone {
+  position: relative;
+  display: none;
+  padding: 0;
+  width: 50px;
+  height: 50px;
+}
+
+.callback__phone-img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
 .hero {
   position: relative;
   padding-top: 13px;
 }
 
-.hero__bg {
-  position: absolute;
-  left: 50%;
-  bottom: 30px;
-  margin-left: 213px;
-  width: 745px;
-  height: 664px;
-  max-height: 100%;
-  border-radius: 150px 0 0 25px;
-  background: url('../img/room.jpg') no-repeat right / cover;
-  background-size: cover;
-  animation: showRightBg 1s;
-}
-
 .hero__left {
-  width: 570px;
-  margin-right: 32px;
+  max-width: 570px;
 }
 
 .hero__title {
@@ -150,7 +163,7 @@ body {
 
 .hero__subtitle {
   position: relative;
-  width: 332px;
+  max-width: 332px;
   margin-bottom: 60px;
   font-family: var(--font-family);
   font-weight: 400;
@@ -163,7 +176,7 @@ body {
   display: block;
   position: relative;
   top: 6px;
-  width: 173px;
+  width: 168px;
   height: 5px;
   background: #baf1ff;
 }
@@ -205,7 +218,6 @@ body {
   color: #000;
   border-radius: 10px;
   background: #fff;
-  z-index: 20;
   animation: showRight 1s;
 }
 
@@ -249,7 +261,7 @@ body {
 
 .calc__range {
   appearance: none;
-  width: 448px;
+  width: 100%;
   height: 12px;
   background: linear-gradient(90deg, rgb(190, 105, 213) 68%, rgb(186, 241, 255) 68%);
   outline: none;
@@ -302,7 +314,7 @@ body {
   margin-right: 10px;
   width: 31px;
   height: 31px;
-  background: url(../img/shape.svg) no-repeat center center;
+  background: url('../img/circle.svg') no-repeat center center;
 }
 
 .calc__input:checked+.calc__custon-input::before {
@@ -404,5 +416,92 @@ body {
 
   100% {
     transform: translateX(0px);
+  }
+}
+
+@media (max-width: 1360px) {
+
+  .callback {
+    display: none;
+  }
+
+  .callback__phone {
+    display: block;
+  }
+
+  .menu__list {
+    gap: 20px;
+  }
+
+}
+
+@media (max-width: 1200px) {
+
+  .header {
+    margin-bottom: 50px;
+  }
+
+  .hero__title {
+    font-size: 50px;
+  }
+}
+
+@media (max-width: 1060px) {
+  .dropdown-menu {
+    display: none;
+  }
+
+  .menu__mobile {
+    display: block;
+  }
+
+  .mobile__list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .menu__list {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: 0 auto;
+    padding-top: 60px;
+    padding-left: 0;
+    width: 480px;
+    background-color: #fff;
+    transform: translateY(-100%);
+    transition: transform 0.6s ease;
+  }
+
+  .menu__list.open {
+    transform: translateY(0%);
+  }
+
+  .hero__wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hero__left {
+    max-width: 100%;
+    margin-bottom: 30px;
+    text-align: center;
+  }
+
+  .hero__subtitle {
+    min-width: 100%;
+  }
+
+  .hero__subtitle::after {
+    left: 427px;
   }
 }
